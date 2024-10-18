@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        html{
+            font-size: 16px;
+        }
+
+        body{
+            font-family: sans-serif;
+            min-height: 100vh;
+            height: 100%;
+        }
+        .contenedor{
+            width: 90%;
+            max-width: 120rem;
+            margin: 3rem auto;
+        }
+        .dblock{display: block;}
+        .fchild .fchild-a{
+            padding: 10px;
+            font-size: 18px;
+        }
+        .fchild .fchild-a:first-child{
+            background-color: green;
+            color: white;
+        }
+        .fchild .fchild-a:last-child{
+            background-color: pink;
+            color: black;
+        }
+        .fchild span:first-of-type{
+            background-color: chocolate;
+        }
+        .fchild span:last-of-type{
+            background-color: blue;
+        }
+        .fchild :only-child{
+            background-color: red;
+        }
+        .fchild span:only-of-type{
+            background-color: cyan;
+        }
+        .sinHijos{
+            padding: 15px;
+            width: 100%;
+        }
+        .sinHijos:empty{background-color: pink;}
+        .ul li:nth-child(2){
+            background-color: aquamarine;
+        }
+        .ul li:nth-last-child(2){
+            background-color: red;
+        }
+        .ul li:nth-of-type(4){
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="fchild">
+            <p class="fchild-a">Texto relacionado 1</p>
+            <span class="fchild-a dblock">Texto Span 1</span>
+            <p class="fchild-a">Texto relacionado 2</p>
+            <span class="fchild-a dblock">Texto Span 3</span>
+            <p class="fchild-a">Texto relacionado 3</p>
+            <span class="fchild-a dblock">Texto Span 3</span>
+            <p class="fchild-a">Texto relacionado 4</p>
+            <div class="hijo">
+                <p>Soy un hijo solitario</p>
+            </div>
+            <div class="hijo2">
+                <span>Soy otro hijo solitario</span>
+            </div>
+
+            <div class="sinHijos"></div>
+            <div class="sinHijos">Tengo un texto</div>
+            <ul class="ul">
+                <li>Item de lista #1</li>
+                <li>Item de lista #2</li>
+                <li>Item de lista #3</li>
+                <li>Item de lista #4</li>
+                <li>Item de lista #5</li>
+                <li>Item de lista #6</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos</title>
+
+    <style>
+        body{
+            margin: 20px;
+            padding: 0;
+            color: #212121;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        input[type="button"]{
+            border: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(2, 119, 214);
+            color: white;
+            font-size:18px;
+            border-radius: 5px;
+            padding: .5rem 3rem;
+            cursor: pointer;
+            transition: .3s all ease;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.41);
+            margin-right: 15px;
+        }
+        input[type="button"]:hover{
+            background-color: rgb(0, 140, 255);
+            border-radius: 20px 0 20px 0;
+        }
+        .mostrarCiclo{
+            margin: 0 auto;
+            margin-top: 18px;
+            text-align: left;
+            width: 500px;
+            background-color: rgb(241, 241, 241);
+            padding: .8rem;
+            transition: .3s all linear;
+            border: 5px solid transparent;
+            font-size: 18px;
+        }
+        .mostrarCiclo:hover{
+            background-color: white;
+            border: 5px solid rgb(241, 241, 241);
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ciclos Repetitivos</h1>
+    <input type="button" value="Ciclo For" onclick="ciclo()">
+    <input type="button" value="Ciclo While" onclick="cicloWhile()">
+    <input type="button" value="Ciclo Do-While" onclick="cicloDoWhile()">
+    <input type="button" value="Ciclo Infinito" onclick="cicloInfinito()">
+
+    <div id="mostrarCiclo" class="mostrarCiclo">Aquí se imprimen los valores repetitivos</div>
+</body>
+    <script>
+        function ciclo(){
+            document.getElementById("mostrarCiclo").innerHTML = "";
+            let mensaje = "";
+            for (let i = 0; i <= 10; i++) {
+                if( i % 2 == 0){
+                    if(i == 0){
+                        mensaje = `El número <b>${i}</b> No es PAR ni IMPAR <br />`;
+                    }else{
+                        mensaje = `<b>Con For</b> El número ${i} es PAR <br />`;
+                    }
+                }else{
+                    mensaje = `<b>Con For</b> El número ${i} es IMPAR <br />`;
+                }
+
+                document.getElementById("mostrarCiclo").innerHTML += mensaje;
+            }
+        }
+
+        function cicloWhile(){
+            let i = 0;
+            let mensaje = "";
+            document.getElementById("mostrarCiclo").innerHTML = "";
+            while(i <= 10){
+                if(i % 2 == 0){
+                    if(i == 0){
+                        mensaje = `El número <b>${i}</b> No es PAR ni IMPAR <br />`;
+                    }else{
+                        mensaje = `<b>Con While</b> El número ${i} es PAR <br />`;
+                    }
+                }else{
+                    mensaje = `<b>Con While</b> El número ${i} es IMPAR <br />`;
+                }
+                document.getElementById("mostrarCiclo").innerHTML += mensaje;
+                i++;
+            }
+        }
+
+        function cicloDoWhile(){
+            let i = 0;
+            let mensaje = "";
+            document.getElementById("mostrarCiclo").innerHTML = "";
+            do{
+                if(i % 2 == 0){
+                    //alert(`El número ${i} es PAR`);
+                    if(i == 0){
+                        mensaje = `El número <b>${i}</b> No es PAR ni IMPAR <br />`;
+                    }else{
+                        mensaje = `<b>Con Do-While</b> El número ${i} es PAR <br />`;
+                    }
+                }else{
+                    //alert(`El número ${i} es IMPAR`);
+                    mensaje = `<b>Con Do-While</b> El número ${i} es IMPAR <br />`;
+                }
+                document.getElementById("mostrarCiclo").innerHTML += mensaje;
+                i++;
+            }while(i<=10);
+        }
+
+        function cicloInfinito(){
+            let i = 0;
+
+            while(0 <= i){
+                //alert(`La variable i tiene valor: ${i}`);
+                document.getElementById("mostrarCiclo").innerHTML += `La variable i tiene valor: ${i}<br>`;
+                i++;
+            }
+        }
+    </script>
+</html>

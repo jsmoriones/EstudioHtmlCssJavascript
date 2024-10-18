@@ -1,0 +1,12 @@
+body{
+    width: 600px;
+    background-color: #F5F433;
+    background-image: url(win.jpg);
+}
+p{
+    color: red;
+    background-color: lightblue;
+}
+strong{
+    color: blue;
+}

@@ -1,0 +1,56 @@
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html{height: 100%;}
+body{
+    background: linear-gradient(#0c0924, #000000) no-repeat;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+}
+h1{
+    font-size: 2.5rem;
+}
+.center-text{text-align: center;}
+
+.contenedor{
+    width: 90%;
+    max-width: 100rem;
+    margin: 3rem auto;
+}
+
+
+.formulario-quicksort{
+    text-align: center;
+    color: #212121;
+    font-size: 25px;
+    background-color: #eeecec;
+    max-width: 50rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding: 1rem;
+}
+.formulario-quicksort label{
+    display: block;
+}
+
+.formulario-quicksort input[type=text]{
+    width: 100%;
+    outline: none;
+    font-size: 0.8em;
+    padding: .5em 1em;
+    margin-top: 1rem;
+}
+
+.formulario-quicksort input[type=submit]{
+    font-size: .8em;
+    margin-top: 2rem;
+    background-color: #4CAF50;
+    color: #FFF;
+    padding: 10px 20px;
+    cursor: pointer;
+    /*box-shadow: 3px 3px 3px #8BC34A, -3px 3px 3px #8BC34A, 3px -3px 3px #8BC34A, -3px -3px 3px #8BC34A;*/
+}

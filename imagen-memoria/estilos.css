@@ -1,0 +1,227 @@
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: rgb(236, 236, 236);
+}
+
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.Principal{
+    margin: 4rem 0;
+}
+
+
+.table tr td img{
+
+}
+.table tr td span{
+    width: 200px;
+    height: 200px;
+    background-color: #212121;
+}
+
+
+
+
+
+pre{
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0;
+}
+sub{
+    vertical-align: sub;
+    font-size: smaller;
+}
+sup{
+    vertical-align: super;
+    font-size: smaller;
+}
+
+.borde1{
+    border-style: solid double dashed dotted;
+    border-width: 5px;
+    border-color: #000;
+    font-size: 25px;
+}
+
+.contenedor-border{
+    width: 40%;
+    margin:0 auto;
+    margin-top: 50px;
+}
+
+.contenedor-border p{
+    font-size: 25px;
+    border-width: 5px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+}
+
+.border-1{
+    border-style: dashed;
+    border-color: #000;
+}
+.border-2{
+    border-style: dotted;
+    border-color: #b13636;
+}
+.border-3{
+    border-style: double;
+    border-color: #30a70c;
+}
+.border-4{
+    border-style: groove;
+    border-color: #368b83;
+}
+.border-5{
+    border-style: inset;
+    border-color: #cebc1a;
+}
+.border-6{
+    border-style: outset;
+    border-color: #48c500;
+}
+.border-7{
+    border-style: solid;
+    border-color: #005bc3;
+}
+.border-8{
+    border-style: ridge;
+    border-color: #9c0d5b;
+}
+.border-9{
+    border-style: hidden;
+    border-color: #af0514;
+}
+
+
+
+.contenedor-border2 p{
+    background-image: url("./imagenes/leon.jpg");
+    background-size: cover;
+}
+.border2-1{
+    box-sizing: border-box;
+    border-style: dashed;
+}
+.border2-2{
+    box-sizing: border-box;
+    border-style: dashed;
+}
+.border2-3{
+    box-sizing: border-box;
+    border-style: dashed;
+}
+.border2-4{
+    box-sizing: border-box;
+    border-style: dashed;
+}
+.border2-5{
+    box-sizing: border-box;
+    border-style: dashed;
+}
+.border2-6{
+    box-sizing: border-box;
+    border-style: dashed;
+}
+.border2-7{
+    box-sizing: border-box;
+    border-style: dashed;
+}
+
+.borderRadius1{
+    width: 200px;
+    height: 130px;
+    background-color: #005bc3;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.borderRadius2{
+    width: 200px;
+    height: 130px;
+    background-color: #005bc3;
+    border-radius: 10px 40px;
+    margin-bottom: 10px;
+}
+
+.borderRadius3{
+    width: 200px;
+    height: 130px;
+    background-color: #005bc3;
+    border-radius: 20px 30px 40px 50px;
+    margin-bottom: 10px;
+    background-image: url("./imagenes/4.jpg");
+}
+
+.borderRadius4{
+    width: 200px;
+    height: 130px;
+    background-color: #005bc3;
+    border-top-left-radius: 8rem 5rem;
+    margin-bottom: 10px;
+    background-image: url("./imagenes/2.jpg");
+}
+
+.borderRadius5{
+    width: 500px;
+    height: 300px;
+    background-color: #005bc3;
+    border-radius: 3rem 4rem 5rem 6rem / 9rem 10rem 5rem 6rem;
+    margin-bottom: 10px;
+    background-image: none;
+}
+
+.bg1, .bg2, .bg3, .bg4{
+    width: 500px;
+    height: 300px;
+    background-color: #30a70c;
+    margin-bottom: 10px;
+}
+
+.bg1{
+    background-image: url("./imagenes/6.jpg");
+    background-size: 50px;
+}
+
+.bg2{
+    background-image: url("./imagenes/3.jpg");
+    background-size: 30%;
+}
+
+.bg3{
+    background-image: url("./imagenes/4.jpg");
+    background-size: cover;
+}
+
+.bg4{
+    background-image: url("./imagenes/5.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg5{
+    background: url(./imagenes/cielo.jpg), url(./imagenes/pasto.png), url(./imagenes/arania-removebg-preview.png);
+    background-size: 100% 38%, 100% 63%, 50% 26%;
+    background-position: top center, bottom center, right 79%;
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 500px;
+    background-blend-mode: multiply;
+}

@@ -1,0 +1,21 @@
+body{
+    background-color: #223;
+}
+
+.container{
+    background-color: grey;
+    min-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    gap: 20px;
+}
+
+.item{
+    background-color: red;
+    width: 150px;
+    height: 150px;
+    color: #FFF;
+    font-size: 5rem;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="dowhile.css">
+</head>
+
+<body>
+    <div class="menu">
+        <h2 style="margin-top: 0;">Menú</h2>
+        <div class="contenedor-seleccion">
+            <label for="select-nivel">--- Seleccione Nivel ---</label>
+            <select id="select-nivel" onchange="cambiaNivel()">
+                <option value="">- - -</option>
+                <option value="nivel1">Nivel 1</option>
+                <option value="nivel2">Nivel 2</option>
+                <option value="nivel3">Nivel 3</option>
+                <option value="nivel4">Nivel 4</option>
+                <option value="adivinador">Adivinador</option>
+            </select>
+            <div class="contenido-cambia">
+                <select id="contenidoNivel1" class="d-n contenidoNivel1" onchange="cambiarSeccion()">
+                    <option value="">Seleccionar el Ejercicio</option>
+                    <option value="ejercicio1">Ejercicio 1</option>
+                    <option value="ejercicio2">Ejercicio 2</option>
+                    <option value="ejercicio3">Ejercicio 3</option>
+                    <option value="ejercicio4">Ejercicio 4</option>
+                    <option value="ejercicio5">Ejercicio 5</option>
+                    <option value="ejercicio6">Ejercicio 6</option>
+                    <option value="ejercicio7">Ejercicio 7</option>
+                    <option value="ejercicio8">Ejercicio 8</option>
+                    <option value="ejercicio9">Ejercicio 9</option>
+                    <option value="ejercicio10">Ejercicio 10</option>
+                    <option value="ejercicio11">Ejercicio 11</option>
+                    <option value="ejercicio12">Ejercicio 12</option>
+                    <option value="ejercicio13">Ejercicio 13</option>
+                    <option value="ejercicio14">Ejercicio 14</option>
+                    <option value="ejercicio15">Ejercicio 15</option>
+                    <option value="ejercicio16">Ejercicio 16</option>
+                </select>
+                <select id="contenidoNivel2" class="d-n contenidoNivel2" onchange="cambiarSeccion2()">
+                    <option value="ejercicio1">Ejercicio1</option>
+                    <option value="ejercicio2">Ejercicio2</option>
+                    <option value="ejercicio3">Ejercicio3</option>
+                    <option value="ejercicio4">Ejercicio4</option>
+                    <option value="ejercicio5">Ejercicio5</option>
+                    <option value="ejercicio6">Ejercicio6</option>
+                    <option value="ejercicio7">Ejercicio7</option>
+                    <option value="ejercicio8">Ejercicio8</option>
+                    <option value="ejercicio9">Ejercicio9</option>
+                    <option value="ejercicio10">Ejercicio10</option>
+                    <option value="ejercicio11">Ejercicio11</option>
+                    <option value="ejercicio12">Ejercicio12</option>
+                    <option value="ejercicio13">Ejercicio13</option>
+                    <option value="ejercicio14">Ejercicio14</option>
+                    <option value="ejercicio15">Ejercicio15</option>
+                    <option value="ejercicio16">Ejercicio16</option>
+                    <option value="ejercicio17">Ejercicio17</option>
+                    <option value="ejercicio18">Ejercicio18</option>
+                    <option value="ejercicio19">Ejercicio19</option>
+                    <option value="ejercicio20">Ejercicio20</option>
+                    <option value="ejercicio21">Ejercicio21</option>
+                    <option value="ejercicio22">Ejercicio22</option>
+                </select>
+                <select id="contenidoNivel3" class="d-n contenidoNivel3" onchange="cambiarSeccion3()">
+                    <option value="ejercicio1">Ejericicio 1</option>
+                    <option value="ejercicio2">Ejericicio 2</option>
+                    <option value="ejercicio3">Ejericicio 3</option>
+                    <option value="ejercicio4">Ejericicio 4</option>
+                    <option value="ejercicio5">Ejericicio 5</option>
+                    <option value="ejercicio6">Ejericicio 6</option>
+                    <option value="ejercicio7">Ejericicio 7</option>
+                    <option value="ejercicio8">Ejericicio 8</option>
+                    <option value="ejercicio9">Ejericicio 9</option>
+                    <option value="ejercicio10">Ejericicio 10</option>
+                    <option value="ejercicio11">Ejericicio 11</option>
+                    <option value="ejercicio12">Ejericicio 12</option>
+                    <option value="ejercicio13">Ejericicio 13</option>
+                    <option value="ejercicio14">Ejericicio 14</option>
+                    <option value="ejercicio15">Ejericicio 15</option>
+                    <option value="ejercicio16">Ejericicio 16</option>
+                    <option value="ejercicio17">Ejericicio 17</option>
+                    <option value="ejercicio18">Ejericicio 18</option>
+                </select>
+                <select id="contenidoNivel4" class="d-n contenidoNivel4" onchange="cambiarSeccion4()">
+                    <option value="ejercicio1">Ejericicio 1</option>
+                    <option value="ejercicio2">Ejericicio 2</option>
+                    <option value="ejercicio3">Ejericicio 3</option>
+                    <option value="ejercicio4">Ejericicio 4</option>
+                    <option value="ejercicio5">Ejericicio 5</option>
+                    <option value="ejercicio6">Ejericicio 6</option>
+                    <option value="ejercicio7">Ejericicio 7</option>
+                    <option value="ejercicio8">Ejericicio 8</option>
+                    <option value="ejercicio9">Ejericicio 9</option>
+                    <option value="ejercicio10">Ejericicio 10</option>
+                    <option value="ejercicio11">Ejericicio 11</option>
+                    <option value="ejercicio12">Ejericicio 12</option>
+                    <option value="ejercicio13">Ejericicio 13</option>
+                    <option value="ejercicio14">Ejericicio 14</option>
+                    <option value="ejercicio15">Ejericicio 15</option>
+                    <option value="ejercicio16">Ejericicio 16</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="content" id="contenido">
+        <h1>¡Bienvenido a la página de inicio!</h1>
+        <div class="footer">
+            <p>Juan Sebastian Moriones Moncayo - ADSO 2821683</p>
+        </div>
+    </div>
+
+    <script src="menu.js"></script>
+    <script src="codigo.js"></script>
+</body>
+
+</html>

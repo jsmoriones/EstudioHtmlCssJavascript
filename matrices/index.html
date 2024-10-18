@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrices</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        input{
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .matriz{
+            display: inline-block;
+            margin-right: 20px;
+            vertical-align: top;
+        }
+        .cell{
+            width: 30px;
+            height: 30px;
+            outline: none;
+            border: 1px solid #000;
+            display: inline-block;
+            margin: 1px;
+            text-align: center;
+            line-height: 30px;
+        }
+        .btn-sumar, .btn-multiplicar{
+            display: block;
+            margin: 0 auto;
+            margin-top: 2rem;
+            padding: .2rem 2rem;
+            font-size: 1.3rem;
+            border: 0;
+            background: #8BC34A;
+            cursor:pointer;
+        }
+        .table-result td{
+            border: 1px solid #212121;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ridercito</h2>
+    <label for="num-matrices">numero de matricez:</label>
+    <input type="number" id="num-matrices" min="1" value="1">
+    <br>
+
+    <label for="rows">numero de filas:</label>
+    <input type="number" id="rows" min="1" value="3">
+    <label for="cols">numero de columnas:</label>
+    <input type="number" id="cols" min="1" value="3">
+    <button onclick="generateMatrices()">Generar Matriz</button>
+    <div id="matriz-container">
+
+    </div>
+</body>
+    <script src="index.js"></script>
+</html>

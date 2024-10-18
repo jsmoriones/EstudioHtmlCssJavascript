@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <input type="button" value="Enviar" onclick="calcular(document.getElementById('num1').value, document.getElementById('num1').value)">
+    <p id="resultado"></p>
+</body>
+<script>
+    function calcular(var1, var2){
+        document.getElementById("resultado").innerHTML = `Los datos ingresados fueron ` + var1 + "  " + var2;
+    }
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra Papel o Tijera</title>
+    <link rel="stylesheet" href="ppt.css" />
+</head>
+<body>
+    <div id="contenedor">
+        <h1>Piedra Papel o Tijera</h1>
+        <section id="ranking">
+            <p>Empieza Jugador 1</p>
+            <div class="ranking">
+                <h3>Puntaje</h3>
+                <p class="jugador">Jugador 1: <b id="jug1">0</b></p>
+                <p class="jugador">Jugador 2: <b id="jug2">0</b></p>
+            </div>
+        </section>
+        <section id="jugadorUno">
+            <h2>Jugador Uno</h2>
+            <div>
+                <div class="opcion" onclick="jugar('piedra')">🪨 Piedra</div>
+                <div class="opcion" onclick="jugar('papel')">🧻 Papel</div>
+                <div class="opcion" onclick="jugar('tijera')">✂️ Tijera</div>
+            </div>
+        </section>
+        <section id="jugadorDos">
+            <h2>Jugador Dos</h2>
+            <div>
+                <div class="opcion" onclick="jugar2('piedra')">🪨 Piedra</div>
+                <div class="opcion" onclick="jugar2('papel')">🧻 Papel</div>
+                <div class="opcion" onclick="jugar2('tijera')">✂️ Tijera</div>
+            </div>
+        </section>
+    </div>
+    <div id="resultado"></div>
+    <script src="ppt.js"></script>
+</body>
+</html>

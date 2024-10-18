@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 30px;
+}
+
+body{
+    min-height: 100vh;
+    background-color: aliceblue;
+    font-family: sans-serif;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "header header header"
+        "menu main right"
+        "menu footer footer";
+    column-gap: 10px;
+    row-gap: 15px;
+}
+.masterhead{
+    grid-area: header;
+    min-height: 180px;
+    background-color: #F90;
+}
+.menu{
+    grid-area: menu;
+    min-height: 800px;
+    background-color: forestgreen;
+}
+.main{
+    grid-area: main;
+    background-color: blueviolet;
+}
+.right{
+    grid-area: right;
+    background-color: chartreuse;
+}
+.footer{
+    grid-area: footer;
+    background-color: brown;
+}

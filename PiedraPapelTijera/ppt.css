@@ -1,0 +1,66 @@
+body{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    margin: 0;
+    background-color: #F4F4F4;
+}
+
+#contenedor{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 50px;
+}
+h1{
+    color: #333;
+    width: 100%;
+    display: block;
+}
+.opcion{
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 20px;
+    background-color: #e5e5e5;
+    border-bottom: 5px solid #CCC;
+    cursor:pointer;
+    border-radius: 10px 10px 0 0;
+    transition: all .2s ease;
+    width: 300px;
+}
+
+
+.opcion:hover{
+    background-color: #cccccc;
+}
+
+#resultado{
+    font-size: 24px;
+    color: #333;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+h3{
+    margin: 0;
+}
+#ranking{
+    width: 100%;
+}
+.ranking{
+    width: 200px;
+    background-color: rgb(114, 73, 0);
+    border: 8px solid chocolate;
+    color: white;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.jugador{
+    margin: 0;
+}

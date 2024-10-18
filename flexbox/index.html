@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - CSS</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1 class="text-center title">Flexbox - CSS3</h1>
+
+    <h2 class="subtitle text-center">display:inline-flex;</h2>
+    <section class="dflexinline">
+        <div>Tres</div>
+        <div>Tristres</div>
+        <div>Tigres</div>
+    </section>
+    <section class="dflexinline">
+        <div>Tres</div>
+        <div>Tristres</div>
+        <div>Tigres</div>
+    </section>
+
+    <h2 class="subtitle text-center">flex:wrap;</h2>
+    <div class="box">
+        <div>Uno</div>
+        <div>Dos</div>
+        <div>Tres</div>
+        <div>Uno</div>
+        <div>Dos</div>
+        <div>Tres</div>
+        <div>Uno</div>
+        <div>Dos</div>
+        <div>Tres</div>
+        <div>Uno</div>
+        <div>Dos</div>
+        <div>Tres</div>
+        <div>Uno</div>
+        <div>Dos</div>
+        <div>Tres</div>
+    </div>
+    <h2 class="subtitle text-center">flex:nowrap;</h2>
+    <div class="box boxnwrap">
+        <div>Uno</div>
+        <div>Dos</div>
+        <div>Tres</div>
+        <div>Uno</div>
+        <div>Dos</div>
+        <div>Tres</div>
+        <div>Uno</div>
+        <div>Dos</div>
+        <div>Tres</div>
+        <div>Uno</div>
+        <div>Dos</div>
+        <div>Tres</div>
+        <div>Uno</div>
+        <div>Dos</div>
+        <div>Tres</div>
+        <div>Uno</div>
+        <div>Dos</div>
+        <div>Tres</div>
+        <div>Uno</div>
+        <div>Dos</div>
+        <div>Tres</div>
+    </div>
+    <h2 class="subtitle text-center">flex:wrap-reverse;</h2>
+    <div class="box boxrwrap">
+        <div>Uno</div>
+        <div>Dos</div>
+        <div>Tres</div>
+    </div>
+
+    <h2 class="subtitle text-center">flex-direction:row;</h2>
+    <section class="ddrow">
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+    </section>
+    <h2 class="subtitle text-center">flex-direction:row-reverse;</h2>
+    <section class="ddrow fdreverse">
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+    </section>
+    <h2 class="subtitle text-center">flex-direction:column;</h2>
+    <section class="ddcolumn">
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+    </section>
+    <h2 class="subtitle text-center">flex-flow:row-reverse nowrap;</h2>
+    <section class="box dfrrnwrp">
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+    </section>
+    <h2 class="subtitle text-center">flex-flow:row wrap;</h2>
+    <section class="box dfrwrp">
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+    </section>
+    <h2 class="subtitle text-center">flex-flow:row-reverse wrap;</h2>
+    <section class="box dfrrwrp">
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+    </section>
+    <h2 class="subtitle text-center">flex-flow:row nowrap;</h2>
+    <section class="box dffrnowrp">
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+    </section>
+
+
+
+
+    <h2 class="subtitle text-center">flex-flow: column wrap;</h2>
+    <section class="box ffcw">
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+    </section>
+    <h2 class="subtitle text-center">flex-flow: column nowrap;</h2>
+    <section class="box ffcnw">
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+    </section>
+    <h2 class="subtitle text-center">flex-flow: column-reverse wrap;</h2>
+    <section class="box ffcrwr">
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+    </section>
+    <h2 class="subtitle text-center">flex-flow: column-reverse nowrap;</h2>
+    <section class="box ffcrnw">
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+        <div>El amor</div>
+        <div>En los</div>
+        <div>Tiempos</div>
+        <div>del colera</div>
+    </section>
+    <h2 class="subtitle text-center">justify-content: flex-start;</h2>
+    <section class="box jcfs">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+    </section>
+    <h2 class="subtitle text-center">justify-content: flex-end;</h2>
+    <section class="box jcfe">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+    </section>
+    <h2 class="subtitle text-center">justify-content: center;</h2>
+    <section class="box jcctr">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+    </section>
+    <h2 class="subtitle text-center">justify-content: space-between;</h2>
+    <section class="box jcsb">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+    </section>
+    <h2 class="subtitle text-center">justify-content: space-around;</h2>
+    <section class="box jcsa">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+    </section>
+    <h2 class="subtitle text-center">justify-content: space-evenly;</h2>
+    <section class="box jcse">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+    </section>
+    <h2 class="subtitle text-center">align-items: flex-start;</h2>
+    <section class="box aifs">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+    </section>
+    <h2 class="subtitle text-center">align-items: flex-end;</h2>
+    <section class="box aife">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+    </section>
+    <h2 class="subtitle text-center">align-items: center;</h2>
+    <section class="box aicnt">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+    </section>
+    <h2 class="subtitle text-center">align-items: stretch;</h2>
+    <section class="box aist">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+    </section>
+    <h2 class="subtitle text-center">align-items: baseline;</h2>
+    <section class="box aibs boxnwrap">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+    </section>
+
+    <h2 class="subtitle text-center">align-content: flex-start;</h2>
+    <section class="box acfs">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+    </section>
+    <h2 class="subtitle text-center">align-content: flex-end;</h2>
+    <section class="box acfe">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+    </section>
+    <h2 class="subtitle text-center">align-content: center;</h2>
+    <section class="box accnt">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+    </section>
+    <h2 class="subtitle text-center">align-content: stretch;</h2>
+    <section class="box acstr">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+    </section>
+    <h2 class="subtitle text-center">align-content: space-around;</h2>
+    <section class="box acsar">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+    </section>
+    <h2 class="subtitle text-center">align-content: space-between;</h2>
+    <section class="box acsbtw">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+    </section>
+    <h2 class="subtitle text-center">row-gap: 30px; column-gap: 60px;</h2>
+    <section class="box gap">
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
+    </section>
+    <h2 class="subtitle text-center">Ejercicio gap</h2>
+    <section id="gap" class="gapexercise">
+        <div class="gapexercise-item">Contenido #1</div>
+        <div class="gapexercise-item">Contenido #2</div>
+        <div class="gapexercise-item">Contenido #3</div>
+    </section>
+</body>
+    <script src="script.js"></script>
+</html>

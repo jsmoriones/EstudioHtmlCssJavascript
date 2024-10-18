@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opciones</title>
+    <link rel="stylesheet" href="opciones.css">
+</head>
+<body>
+    <!--<h1>Opciones</h1>-->
+    <div id="bola" class="bola"></div>
+    <div class="menu" id="menu">
+        <ul>
+            <li onclick="mostrarContenido('Inicio')">Inicio</li>
+            <li onclick="mostrarContenido('Bola')">Bola</li>
+            <li onclick="mostrarContenido('Ejemplo')">Ejemplo</li>
+            <li onclick="mostrarContenido('Salir')">Salir</li>
+            <li onclick="mostrarContenido('ParImpar')">Par o Impar</li>
+        </ul>
+    </div>
+    <div id="contenido" class="contenido"></div>
+    <p>Seleccione una opción del menú</p>
+    <audio src="grito.mp3" id="audio"></audio>
+    <script src="opciones.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+*{margin: 0;padding: 0;border: 0;}
+html{font-size: 16px;box-sizing: border-box;}
+body{font-family: sans-serif;min-height: 100vh;height: 100%;}
+a{text-decoration: none;font-size: 1.7rem;}
+.text-center{text-align: center;}
+.title{text-transform: uppercase; margin: 2rem 0;}
+.subtitle{margin:2rem 0;}
+
+.box,
+.dflexinline,
+.ddrow,
+.ddcolumn,
+.dff,
+.gapexercise {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 60rem;
+    background-color: red;
+    max-height: 200px;
+    min-height: 500px;
+}
+.box div,
+.dflexinline div,
+.ddrow div,
+.ddcolumn div,
+.dff div {
+    border: 1px solid green;
+    background-color: aqua;
+    color: #000;
+    width: 350px;
+    padding: 10px;
+    font-weight: bold;
+}
+.boxnwrap{flex-wrap: nowrap;}
+.boxrwrap{flex-wrap: wrap-reverse;}
+.dflexinline{display: inline-flex;}
+.ddrow{flex-direction: row;}
+.fdreverse{flex-direction: row-reverse;}
+.ddcolumn{flex-direction: column;}
+.dffrnowrp{flex-flow: row nowrap;}
+.dfrrnwrp{flex-flow: row-reverse nowrap;}
+.dff{flex-flow: row-reverse nowrap;}
+.dfrwrp{flex-flow: row wrap;}
+.dfrrwrp{flex-flow: row-reverse wrap;}
+.ffcw{flex-flow: column wrap;}
+.ffcnw{flex-flow: column nowrap;}
+.ffcrwr{flex-flow: column-reverse wrap;}
+.ffcrnw{flex-flow: column-reverse nowrap;}
+.jcfs{justify-content: flex-start;}
+.jcfe{justify-content: flex-end;}
+.jcctr{justify-content: center;}
+.jcsb{justify-content: space-between;}
+.jcsa{justify-content: space-around;}
+.jcse{justify-content: space-evenly;}
+.aifs{align-items: flex-start;}
+.aife{align-items: flex-end;}
+.aicnt{align-items: center;}
+.aist{align-items: stretch;}
+.aibs{align-items: baseline;}
+.acfs{align-content: flex-start;}
+.acfe{align-content: flex-end;}
+.accnt{align-content: center;}
+.acstr{align-content: stretch;}
+.acsar{align-content: space-around;}
+.acsbtw{align-content: space-between;}
+.gap{
+    row-gap: 30px;
+    column-gap: 60px;
+}
+.gapexercise{gap: 20px;}
+.gapexercise div{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+}
+.gapexercise-item{cursor: e-resize;}

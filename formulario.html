@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+    <section id="formularios" class="formularios">
+        <form id="miFormulario" class="miFormulario">
+            <div id="datosBasicos" class="datosBasicos">
+                <label for="txtUsuario">Usuario</label>
+                <input type="text" id="txtUsuario" placeholder="ingresa usuario" required>
+            </div>
+            <div id="datosBasicos" class="datosBasicos">
+                <label for="txtContrasenia">Contraseña</label>
+                <input type="password" id="txtContrasenia" placeholder="ingresa contraseña" required>
+            </div>
+            <div id="datosBasicos" class="datosBasicos">
+                <label for="txtEmail">Email</label>
+                <input type="email" id="txtEmail" placeholder="ingresa email" required>
+            </div>
+            <button id="enviar" onclick="muestraDatos()">Enviar</button>
+        </form>
+    </section>
+    <script src="formulario.js"></script>
+</body>
+</html>

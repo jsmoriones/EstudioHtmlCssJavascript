@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas de Estudiantes</title>
+    <link rel="stylesheet" href="notas.css">
+</head>
+<body>
+    <h1>Claculadora de Notas</h1>
+    <form id="formulario" class="formulario">
+        <fieldset>
+            <legend>Llena con datos los campos</legend>
+            <p class="tituloUsuario">Ingresa los valores del estudiante <b id="numEstudianteSpan">1</b></p>
+            <div class="formularioInputs">
+                <label for="nombres">Nombre(s):</label>
+                <input type="text" id="nombres" placeholder="Escribe tus nombre(s)">
+            </div>
+            <div class="formularioInputs">
+                <label for="apellidos">Apellido(s):</label>
+                <input type="text" id="apellidos" placeholder="Escribe tus apellido(s)">
+            </div>
+            <div class="formularioInputs formCurso">
+                <label for="curso">Curso:</label>
+                <input type="text" id="curso" placeholder="Escribe el nombre de tu curso">
+            </div>
+            <div class="formularioNotas">
+                <div class="formularioNota">
+                    <label for="nota1">Nota 1:</label>
+                    <input type="number" id="nota1" placeholder="Escribe nota 1">
+                </div>
+                <div class="formularioNota">
+                    <label for="nota2">Nota 2:</label>
+                    <input type="number" id="nota2" placeholder="Escribe nota 2">
+                </div>
+                <div class="formularioNota">
+                    <label for="nota3">Nota 3:</label>
+                    <input type="number" id="nota3" placeholder="Escribe nota 3">
+                </div>
+            </div>
+            <input type="button" value="Calcular" id="botonEnviar" onclick="calcular()">
+        </fieldset>
+    </form>
+    <section id="resultado" class="resultado">
+        <!--<div class="resultadoNota">
+            <p>
+                <b>Nombre(s): </b> <span class="resultado-nombres">Juan</span>
+            </p>
+            <p>
+                <b>Apellido(s): </b> <span class="resultado-apellidos">Moriones</span>
+            </p>
+            <p>
+                <b>Curso: </b> <span class="resultado-curso">ADSO</span>
+            </p>
+            <p>
+                <b>Resultado Nota: </b> <span class="resultado-nota">3.2</span>
+            </p>
+        </div>-->
+    </section>
+    <script src="notas.js"></script>
+</body>
+</html>

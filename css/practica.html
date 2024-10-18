@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica CSS</title>
+    <link rel="stylesheet" href="practica.css">
+</head>
+<body>
+    <div class="container" id="imageContainer">
+        <h2 id="titulo">Imagen con 100px</h2>
+        <p id="message" class="message">Tamaño fino de imagen a 100px en ancho y alto independientemente del contendor</p>
+        <img src="meme.jpg" alt="Meme">
+    </div>
+
+    <div class="buttons">
+        <button onclick="changeImage('cover')">Cover</button>
+        <button onclick="changeImage('contain')">Contain</button>
+        <button onclick="changeImage('full-width')">Full-Width 100%</button>
+        <button onclick="changeImage('fixed-size')">100px</button>
+        <button onclick="changeImage('auto')">Auto</button>
+    </div>
+</body>
+    <script src="./codigoPracticaCSS.js"></script>
+</html>

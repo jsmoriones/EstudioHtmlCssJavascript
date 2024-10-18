@@ -1,0 +1,41 @@
+body{
+    font-family: sans-serif;
+}
+section{
+    color: yellow;
+    border: 10px solid blue;
+    width: 80%;
+    /*float: left;*/
+    background-color: #e0e0e0;
+    margin: 0 auto;
+}
+h1{text-align: center;text-decoration: underline;font-size: 40px;}
+table{margin: 0 auto;}
+table td{padding: 15px;font-size: 25px;}
+table td a{text-decoration: none;color: rgb(255, 0, 212);font-weight: bold;}
+
+#bebidas{
+    background-color: #a8a8a8;
+    border: 10px solid pink;
+    padding: 20px 0;
+}
+
+.jleche{
+    color: green;
+    border: 100px solid chocolate;
+    opacity: 0.5;
+}
+
+.pmasa{
+    border: 10px solid rgb(200, 0, 255);
+}
+
+#lulo{
+    border-radius: 50%;
+}
+#tomate{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}

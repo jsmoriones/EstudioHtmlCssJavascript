@@ -1,0 +1,46 @@
+function numeros(){
+    let num1 = document.getElementById("num1").value;
+    let num2 = document.getElementById("num2").value;
+    let num3 = document.getElementById("num3").value;
+    let mayor;
+    let resultado;
+
+    if(num1 > num2 && num1 > num3){
+        mayor = num1;
+    }else if(num2 > num1 && num2 > num3){
+        mayor = num2;
+    }else if(num3 > num1 && num3 > num2){
+        mayor = num3;
+    }
+    
+    
+    if(mayor == num1){
+        resultado = mayor;
+        if(num2 > num3){
+            resultado += " "+num2+" "+num3;
+        }else if(num3 > num2){
+            resultado += " "+num3+" "+num2;
+        }
+        document.getElementById("lblResultado").innerHTML = resultado;
+    }
+
+    if(mayor == num2){
+        resultado = mayor;
+        if(num1 > num3){
+            resultado += " "+num1+" "+num3;
+        }else if(num3 > num1){
+            resultado += " "+num3+" "+num1;
+        }
+        document.getElementById("lblResultado").innerHTML = resultado;
+    }
+
+    if(mayor == num3){
+        resultado = mayor;
+        if(num1 > num2){
+            resultado += " "+num1+" "+num2;
+        }else if(num2 > num1){
+            resultado += " "+num2+" "+num1;
+        }
+        document.getElementById("lblResultado").innerHTML = resultado;
+    }
+}

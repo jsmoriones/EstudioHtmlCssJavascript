@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: "Mulish", sans-serif;
+    background-color: #2d3238;
+}
+
+.Header{
+    padding: 1rem 0;
+}
+.Header:before{
+    content: "";
+    display: block;
+    min-height: 170px;
+    background-image: linear-gradient(to right, #1363df, #4fd3c4);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    bottom: 0;
+}
+.custom-area{
+    display: grid;
+    grid-template-areas: "logo search search options"
+        "userprofile userprofile userprofile userprofile";
+    grid-template-columns: 1fr 4fr 1fr;
+}
+.custom-area-logo{ grid-area: logo; min-height: 50px;}
+.custom-area-search{ grid-area: search; }
+.custom-area-options{ grid-area: options; }
+.custom-area-userprofile{ grid-area: userprofile; }
+.custom-area-content{ grid-area: content; }
+.custom-area-sideleft{ grid-area: sideleft; }

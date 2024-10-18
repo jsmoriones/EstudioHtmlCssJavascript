@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo elementos/clases</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        html{
+            font-size: 16px;
+        }
+
+        body{
+            font-family: sans-serif;
+            min-height: 100vh;
+            height: 100%;
+        }
+        a{
+            text-decoration: none;
+            font-size: 1.7rem;
+        }
+        h3{
+            margin-top: 2rem;
+        }
+        h3:first-child{margin-top: 0;}
+        .contenedor{
+            width: 90%;
+            max-width: 120rem;
+            margin: 3rem auto;
+        }
+        .spaces{
+            width: 100%;
+            height: 800px;
+        }
+        /*Hover*/
+        .hover{
+            background-color: #000;
+            padding: 10px;
+        }
+        .hover:hover{
+            padding: 20px;
+        }
+        .hover:hover .hover-1{
+            background-color: rgb(0, 40, 185);
+        }
+        .hover-1{
+            color: #FFF;
+        }
+        .hover-1:hover{
+            background-color: red;
+            color: rgb(0, 255, 34);
+        }
+        /*link*/
+        .link-1:link{
+            color: red;
+        }
+        .link-1:visited{
+            color: green;
+        }
+        /*active*/
+        .active-1:active{
+            background-color: yellow;
+            color: rgb(255, 0, 170);
+            padding: 10px;
+            display: block;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        /*target*/
+        .contenidoTarget{
+            padding: 10px;
+        }
+        .contenidoTarget:target{
+            background-color: #000;
+            color: red;
+        }
+        /* nots */
+        .nots > *:not(p){
+            background-color: green;
+        }
+        /*focus*/
+        .focus-input{
+            padding: 8px;
+            width: 200px;
+            border: 1px solid #000;
+        }
+        .focus-input:focus{
+            background-color: pink;
+            width: 250px;
+        }
+        /*dir*/
+        .dir-input{
+            max-width: 100%;
+            border: 1px solid #000;
+            padding: 10px;
+            padding-right: 30px;
+        }
+        .dir-contenedor{
+            position: relative;
+            width: 200px;
+        }
+        .dir-contenedor:after{
+            content: "\f06e";
+            font-family:"Font Awesome 6 Free";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            bottom: 20%;
+            right: -4px;
+        }
+        .dir-rtl:after{left: 10px;}
+        /*input.dir-input:dir(ltr):has(.dir-contenedor):after{
+            left: 0;
+        }*/
+        /*.dir-contenedor:target:after{
+            left: 0;
+        }*/
+        input.dir-input:focus{
+            padding-left: 30px;
+        }
+        input.dir-input:focus::placeholder{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h3>Hover</h3>
+        <div class="hover">
+            <a href="#" class="hover-1">Soy un enlace</a>
+        </div>
+        <h3>Link, Visited</h3>
+        <div class="link">
+            <a href="https://facebook.com" target="_blank" class="link-1">Soy un Link</a>
+        </div>
+        <h3>Active</h3>
+        <div class="active">
+            <a href="#" class="active-1">Activame!!!</a>
+        </div>
+        <h3>Focus</h3>
+        <div class="focus">
+            <a href="#contenido1" class="focus-1">Contenido #1</a>
+            <a href="#contenido2" class="focus-2" >Contenido #2</a>
+        </div>
+        <h3>Not(s)</h3>
+        <div class="nots">
+            <a href="#">enlace 1</a>
+            <p>parrafo 1</p>
+            <small>texto pequeño 1</small>
+            <a href="#">enlace 2</a>
+            <p>parrafo 2</p>
+            <small>texto pequeño 2</small>
+        </div>
+        <h3>focus</h3>
+        <div class="focus">
+            <input type="text" class="focus-input" placeholder="Escribe tu nombre">
+        </div>
+        <h3>dir:()</h3>
+        <div class="dir">
+            <div class="dir-contenedor">
+                <input type="text" class="dir-input" placeholder="Ingresa nombre">
+            </div>
+            <input type="button" value="Enviar" id="btnSend">
+        </div>
+
+        <div class="spaces"></div>
+
+        <section id="contenido1" class="contenidoTarget">
+            <h2>Contenido 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt accusamus, autem dolore quam placeat cumque incidunt voluptatum voluptas blanditiis architecto obcaecati, sapiente id magnam libero quisquam illum nemo ad?Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quos dolorem, magni amet cupiditate illo! Illo, reprehenderit officiis. Voluptatum temporibus debitis dolor voluptate esse fugiat possimus, tenetur repudiandae provident quis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi facere dolorem dolorum officiis laboriosam quam sed iste totam quidem fugiat perspiciatis saepe, pariatur mollitia sunt id ad beatae rem suscipit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis eius dicta deserunt aut molestiae pariatur reiciendis at suscipit incidunt, soluta nobis a. Voluptas id unde iusto vitae? Laudantium, repellendus aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis quia aperiam est hic in blanditiis nulla eius quae natus dolorum necessitatibus, quibusdam ratione similique consequatur provident expedita rerum nostrum nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quo, ad dolore, consectetur vitae exercitationem eum dicta perferendis eius aliquam voluptates? Magnam corrupti porro est dolores magni voluptas, sunt illo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, placeat maxime perferendis atque quas autem distinctio consequuntur debitis earum unde sint? Nulla, laboriosam? Non enim quis aperiam, magnam doloribus nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt accusamus, autem dolore quam placeat cumque incidunt voluptatum voluptas blanditiis architecto obcaecati, sapiente id magnam libero quisquam illum nemo ad?Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quos dolorem, magni amet cupiditate illo! Illo, reprehenderit officiis. Voluptatum temporibus debitis dolor voluptate esse fugiat possimus, tenetur repudiandae provident quis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi facere dolorem dolorum officiis laboriosam quam sed iste totam quidem fugiat perspiciatis saepe, pariatur mollitia sunt id ad beatae rem suscipit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis eius dicta deserunt aut molestiae pariatur reiciendis at suscipit incidunt, soluta nobis a. Voluptas id unde iusto vitae? Laudantium, repellendus aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis quia aperiam est hic in blanditiis nulla eius quae natus dolorum necessitatibus, quibusdam ratione similique consequatur provident expedita rerum nostrum nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quo, ad dolore, consectetur vitae exercitationem eum dicta perferendis eius aliquam voluptates? Magnam corrupti porro est dolores magni voluptas, sunt illo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, placeat maxime perferendis atque quas autem distinctio consequuntur debitis earum unde sint? Nulla, laboriosam? Non enim quis aperiam, magnam doloribus nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt accusamus, autem dolore quam placeat cumque incidunt voluptatum voluptas blanditiis architecto obcaecati, sapiente id magnam libero quisquam illum nemo ad?Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quos dolorem, magni amet cupiditate illo! Illo, reprehenderit officiis. Voluptatum temporibus debitis dolor voluptate esse fugiat possimus, tenetur repudiandae provident quis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi facere dolorem dolorum officiis laboriosam quam sed iste totam quidem fugiat perspiciatis saepe, pariatur mollitia sunt id ad beatae rem suscipit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis eius dicta deserunt aut molestiae pariatur reiciendis at suscipit incidunt, soluta nobis a. Voluptas id unde iusto vitae? Laudantium, repellendus aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis quia aperiam est hic in blanditiis nulla eius quae natus dolorum necessitatibus, quibusdam ratione similique consequatur provident expedita rerum nostrum nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quo, ad dolore, consectetur vitae exercitationem eum dicta perferendis eius aliquam voluptates? Magnam corrupti porro est dolores magni voluptas, sunt illo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, placeat maxime perferendis atque quas autem distinctio consequuntur debitis earum unde sint? Nulla, laboriosam? Non enim quis aperiam, magnam doloribus nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt accusamus, autem dolore quam placeat cumque incidunt voluptatum voluptas blanditiis architecto obcaecati, sapiente id magnam libero quisquam illum nemo ad?Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quos dolorem, magni amet cupiditate illo! Illo, reprehenderit officiis. Voluptatum temporibus debitis dolor voluptate esse fugiat possimus, tenetur repudiandae provident quis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi facere dolorem dolorum officiis laboriosam quam sed iste totam quidem fugiat perspiciatis saepe, pariatur mollitia sunt id ad beatae rem suscipit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis eius dicta deserunt aut molestiae pariatur reiciendis at suscipit incidunt, soluta nobis a. Voluptas id unde iusto vitae? Laudantium, repellendus aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis quia aperiam est hic in blanditiis nulla eius quae natus dolorum necessitatibus, quibusdam ratione similique consequatur provident expedita rerum nostrum nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quo, ad dolore, consectetur vitae exercitationem eum dicta perferendis eius aliquam voluptates? Magnam corrupti porro est dolores magni voluptas, sunt illo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, placeat maxime perferendis atque quas autem distinctio consequuntur debitis earum unde sint? Nulla, laboriosam? Non enim quis aperiam, magnam doloribus nesciunt.</p>
+        </section>
+        <section id="contenido2" class="contenidoTarget">
+            <h2>Contenido 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt accusamus, autem dolore quam placeat cumque incidunt voluptatum voluptas blanditiis architecto obcaecati, sapiente id magnam libero quisquam illum nemo ad?Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quos dolorem, magni amet cupiditate illo! Illo, reprehenderit officiis. Voluptatum temporibus debitis dolor voluptate esse fugiat possimus, tenetur repudiandae provident quis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi facere dolorem dolorum officiis laboriosam quam sed iste totam quidem fugiat perspiciatis saepe, pariatur mollitia sunt id ad beatae rem suscipit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis eius dicta deserunt aut molestiae pariatur reiciendis at suscipit incidunt, soluta nobis a. Voluptas id unde iusto vitae? Laudantium, repellendus aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis quia aperiam est hic in blanditiis nulla eius quae natus dolorum necessitatibus, quibusdam ratione similique consequatur provident expedita rerum nostrum nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quo, ad dolore, consectetur vitae exercitationem eum dicta perferendis eius aliquam voluptates? Magnam corrupti porro est dolores magni voluptas, sunt illo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, placeat maxime perferendis atque quas autem distinctio consequuntur debitis earum unde sint? Nulla, laboriosam? Non enim quis aperiam, magnam doloribus nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt accusamus, autem dolore quam placeat cumque incidunt voluptatum voluptas blanditiis architecto obcaecati, sapiente id magnam libero quisquam illum nemo ad?Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quos dolorem, magni amet cupiditate illo! Illo, reprehenderit officiis. Voluptatum temporibus debitis dolor voluptate esse fugiat possimus, tenetur repudiandae provident quis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi facere dolorem dolorum officiis laboriosam quam sed iste totam quidem fugiat perspiciatis saepe, pariatur mollitia sunt id ad beatae rem suscipit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis eius dicta deserunt aut molestiae pariatur reiciendis at suscipit incidunt, soluta nobis a. Voluptas id unde iusto vitae? Laudantium, repellendus aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis quia aperiam est hic in blanditiis nulla eius quae natus dolorum necessitatibus, quibusdam ratione similique consequatur provident expedita rerum nostrum nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quo, ad dolore, consectetur vitae exercitationem eum dicta perferendis eius aliquam voluptates? Magnam corrupti porro est dolores magni voluptas, sunt illo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, placeat maxime perferendis atque quas autem distinctio consequuntur debitis earum unde sint? Nulla, laboriosam? Non enim quis aperiam, magnam doloribus nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt accusamus, autem dolore quam placeat cumque incidunt voluptatum voluptas blanditiis architecto obcaecati, sapiente id magnam libero quisquam illum nemo ad?Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quos dolorem, magni amet cupiditate illo! Illo, reprehenderit officiis. Voluptatum temporibus debitis dolor voluptate esse fugiat possimus, tenetur repudiandae provident quis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi facere dolorem dolorum officiis laboriosam quam sed iste totam quidem fugiat perspiciatis saepe, pariatur mollitia sunt id ad beatae rem suscipit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis eius dicta deserunt aut molestiae pariatur reiciendis at suscipit incidunt, soluta nobis a. Voluptas id unde iusto vitae? Laudantium, repellendus aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis quia aperiam est hic in blanditiis nulla eius quae natus dolorum necessitatibus, quibusdam ratione similique consequatur provident expedita rerum nostrum nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quo, ad dolore, consectetur vitae exercitationem eum dicta perferendis eius aliquam voluptates? Magnam corrupti porro est dolores magni voluptas, sunt illo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, placeat maxime perferendis atque quas autem distinctio consequuntur debitis earum unde sint? Nulla, laboriosam? Non enim quis aperiam, magnam doloribus nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt accusamus, autem dolore quam placeat cumque incidunt voluptatum voluptas blanditiis architecto obcaecati, sapiente id magnam libero quisquam illum nemo ad?Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quos dolorem, magni amet cupiditate illo! Illo, reprehenderit officiis. Voluptatum temporibus debitis dolor voluptate esse fugiat possimus, tenetur repudiandae provident quis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi facere dolorem dolorum officiis laboriosam quam sed iste totam quidem fugiat perspiciatis saepe, pariatur mollitia sunt id ad beatae rem suscipit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis eius dicta deserunt aut molestiae pariatur reiciendis at suscipit incidunt, soluta nobis a. Voluptas id unde iusto vitae? Laudantium, repellendus aut. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis quia aperiam est hic in blanditiis nulla eius quae natus dolorum necessitatibus, quibusdam ratione similique consequatur provident expedita rerum nostrum nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quo, ad dolore, consectetur vitae exercitationem eum dicta perferendis eius aliquam voluptates? Magnam corrupti porro est dolores magni voluptas, sunt illo. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, placeat maxime perferendis atque quas autem distinctio consequuntur debitis earum unde sint? Nulla, laboriosam? Non enim quis aperiam, magnam doloribus nesciunt.</p>
+        </section>
+    </div>    
+</body>
+    <script>
+        const btnSend = document.querySelector("#btnSend");
+        const dirInput = document.querySelector(".dir-input");
+        const dirContenedor = document.querySelector(".dir-contenedor")
+/*content: "";
+            background-image: url("https://cdn-icons-png.flaticon.com/512/65/65000.png");
+            background-size: cover;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            bottom: 25%;
+            right: -4px;*/
+            dirInput.addEventListener("focus", function(){
+                dirContenedor.classList.add("dir-rtl")
+            })
+            dirInput.addEventListener("blur", function(){
+                dirContenedor.classList.remove("dir-rtl")
+            })
+    </script>
+</html>

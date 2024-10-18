@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-size: 16px;
+            font-family: sans-serif;
+        }
+        h1{
+            text-align: center;
+            margin:2rem auto;
+        }
+        h2{
+            margin-top:2rem;
+            margin-bottom:2rem;
+        }
+        .content-image1{
+            width: 500px;
+            height: 400px;
+            overflow: visible;
+        }
+        .content-image2{
+            width: 500px;
+            height: 400px;
+            overflow: hidden;
+        }
+        .content-image3{
+            width: 500px;
+            height: 400px;
+            overflow: scroll;
+        }
+        .content-image4{
+            width: 500px;
+            height: 400px;
+            overflow: auto;
+        }
+
+        .content-text1{
+            width: 700px;
+            height: 400px;
+            overflow: visible;
+            text-wrap: nowrap;
+        }
+        .content-text2{
+            width: 700px;
+            height: 400px;
+            overflow: hidden;
+            text-wrap: nowrap;
+        }
+        .content-text3{
+            width: 700px;
+            height: 400px;
+            overflow: scroll;
+            text-wrap: nowrap;
+        }
+        .content-text4{
+            width: 700px;
+            height: 400px;
+            overflow: auto;
+            text-wrap: nowrap;
+        }
+        .bloque{
+            width: 300px;
+            height: 200px;
+            margin-bottom: 1rem;
+            background-color: red;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            padding: 1rem;
+        }
+        .bloque2{display: none;}
+        .bloque1e,.bloque2f,.bloque3g,.bloque4h{display: inline;}
+        .pinline{margin-bottom: 2rem;}
+        .bloque1i,.bloque2j,.bloque3k,.bloque4l{
+            display: inline-block;
+        }
+        .contenedor-float, .contenedor-position{
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .f1 img{
+            float: right;
+            margin: 15px;
+        }
+        .f2 img{
+            float: left;
+            margin: 15px;
+        }
+        .f3 img{
+            float: none;
+            margin: 15px;
+        }
+        .pcontenedor{
+            background-color: darkcyan;
+            height: 600px;
+        }
+        .boxabsolute, .boxrelative, .boxstatic, .boxfixed{
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            color: white;
+        }
+        .boxrelative{
+            position: relative;
+            top: 50px;
+            left: 100px;
+        }
+        .contenedorabsolute{
+            background-color: blue;
+            width: 80%;
+            margin: 0 auto;
+            padding: 1rem;
+            position: relative;
+            z-index: 0;
+            height: 20rem;
+        }
+        .boxabsolute{
+            position: absolute;
+            bottom: 50px;
+            right: 70px;
+            background-color: pink;
+            color: #000;
+        }
+        .boxstatic{
+            background-color: chocolate;
+        }
+        .boxfixed{
+            background-color: yellow;
+            color: #000;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+        .ejerciciotodo{
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .divgrande{
+            width: 65%;
+            padding: 1rem;
+            background-color: yellow;
+            display: inline-block;
+        }
+        .divpequenio{
+            width: 30%;
+            padding: 1rem;
+            background-color: red;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+        }
+        .divbanner{
+            background-color: pink;
+            height: 7rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        .divcontent{
+            background-color: green;
+            height: 9rem;
+            width: 32.9%;
+            font-size: 50px;
+        }
+        .textcontent{
+            width: 32.9%;
+            height: 9rem;
+            display: inline-block;
+            margin-left: 7px;
+            text-align: center;
+        }
+        .imagecontent{
+            width: 32.9%;
+            height: 9rem;
+            display: inline-block;
+        }
+        .dc1{float: left;}
+        .dc2{float: right;}
+        .dc3{float:right;}
+        .dc5{margin-right: 5px;float:right;}
+        .divptop{
+            background-color: blue;
+            height: 15rem;
+            margin-bottom: 10px;
+        }
+        .divpbottom{
+            background-color: blue;
+            height: 20rem;
+        }
+        .divsticky{
+            position: sticky;
+            width: 10rem;
+            height: 10rem;
+            background: yellow;
+            bottom: 28%;
+            left: 65%;
+        }
+    </style>
+</head>
+<body>
+    <h1>overflow:auto, scroll, hidden, visible;</h1>
+    <div class="content-image1">
+        <img src="opera-magna.jpeg" alt="Grupo opera magna">
+    </div>
+    <div class="content-image2">
+        <img src="opera-magna.jpeg" alt="Grupo opera magna">
+    </div>
+    <div class="content-image3">
+        <img src="opera-magna.jpeg" alt="Grupo opera magna">
+    </div>
+    <div class="content-image4">
+        <img src="opera-magna.jpeg" alt="Grupo opera magna">
+    </div>
+
+    <div class="content-text1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis aliquid doloribus fugiat quidem quasi voluptatibus veritatis soluta sunt quaerat, iure nihil in tempora amet quis a facilis dolorum optio.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis aliquid doloribus fugiat quidem quasi voluptatibus veritatis soluta sunt quaerat, iure nihil in tempora amet quis a facilis dolorum optio.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis aliquid doloribus fugiat quidem quasi voluptatibus veritatis soluta sunt quaerat, iure nihil in tempora amet quis a facilis dolorum optio.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis aliquid doloribus fugiat quidem quasi voluptatibus veritatis soluta sunt quaerat, iure nihil in tempora amet quis a facilis dolorum optio.</p>
+    </div>
+    <div class="content-text2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis aliquid doloribus fugiat quidem quasi voluptatibus veritatis soluta sunt quaerat, iure nihil in tempora amet quis a facilis dolorum optio.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis aliquid doloribus fugiat quidem quasi voluptatibus veritatis soluta sunt quaerat, iure nihil in tempora amet quis a facilis dolorum optio.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis aliquid doloribus fugiat quidem quasi voluptatibus veritatis soluta sunt quaerat, iure nihil in tempora amet quis a facilis dolorum optio.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis aliquid doloribus fugiat quidem quasi voluptatibus veritatis soluta sunt quaerat, iure nihil in tempora amet quis a facilis dolorum optio.</p>
+    </div>
+    <div class="content-text3">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis aliquid doloribus fugiat quidem quasi voluptatibus veritatis soluta sunt quaerat, iure nihil in tempora amet quis a facilis dolorum optio.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis aliquid doloribus fugiat quidem quasi voluptatibus veritatis soluta sunt quaerat, iure nihil in tempora amet quis a facilis dolorum optio.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis aliquid doloribus fugiat quidem quasi voluptatibus veritatis soluta sunt quaerat, iure nihil in tempora amet quis a facilis dolorum optio.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis aliquid doloribus fugiat quidem quasi voluptatibus veritatis soluta sunt quaerat, iure nihil in tempora amet quis a facilis dolorum optio.</p>
+    </div>
+    <div class="content-text4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis aliquid doloribus fugiat quidem quasi voluptatibus veritatis soluta sunt quaerat, iure nihil in tempora amet quis a facilis dolorum optio.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis aliquid doloribus fugiat quidem quasi voluptatibus veritatis soluta sunt quaerat, iure nihil in tempora amet quis a facilis dolorum optio.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis aliquid doloribus fugiat quidem quasi voluptatibus veritatis soluta sunt quaerat, iure nihil in tempora amet quis a facilis dolorum optio.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis aliquid doloribus fugiat quidem quasi voluptatibus veritatis soluta sunt quaerat, iure nihil in tempora amet quis a facilis dolorum optio.</p>
+    </div>
+    <h1>display: block, inline, inline-block;</h1>
+    <section class="contenedor-block">
+        <h2>display: none;</h2>
+        <p>El elemento "2" desaparece por tener un display:none, y el siguiente bloque no respeta su espacio y suben todos los elementos</p>
+        <div class="bloque bloque1">1</div>
+        <div class="bloque bloque2">2</div>
+        <div class="bloque bloque3">3</div>
+        <div class="bloque bloque4">4</div>
+
+        <h2>display: block;</h2>
+        <p>Todos los elementos div que son contenedores tiene por defecto su estilo display en block, por lo tanto se ordenan uno encima del otro</p>
+        <div class="bloque bloque1a">1</div>
+        <div class="bloque bloque2b">2</div>
+        <div class="bloque bloque3c">3</div>
+        <div class="bloque bloque4d">4</div>
+
+        <h2>display: inline;</h2>
+        <p class="pinline">Todos los elementos se ordenan uno seguida del otro debido a que le agregamos a cada elemento div con clase blque un estilo de display: inline;</p>
+        <div class="bloque bloque1e">1</div>
+        <div class="bloque bloque2f">2</div>
+        <div class="bloque bloque3g">3</div>
+        <div class="bloque bloque4h">4</div>
+
+        <h2>display: inline-block;</h2>
+        <p>Todos los elementos se ordenan uno seguido del otro debido y se respeta su ancho / alto debido a que la propiedad display: inline-block; los ordena seguido del otro por el "inline" y no pierden su tamaño debido a la propidad "block", por ello se denomida display: inline-block; toma las dos propiedades en linea y bloque</p>
+        <div class="bloque bloque1i">1</div>
+        <div class="bloque bloque2j">2</div>
+        <div class="bloque bloque3k">3</div>
+        <div class="bloque bloque4l">4</div>
+
+        <h1>Float: right, left, none;</h1>
+        <p></p>
+        <div class="contenedor-float">
+            <h2>float: right;</h2>
+            <p class="pinline">Le agregamos a la imagen el float: right; por lo tanto la imagen se corre hacia la derecha y ahi es donde todo el texto restante se ordena al rededor de la imagen</p>
+            <div class="f1">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia error ea, distinctio doloremque autem alias fugit facere ipsum ad dicta. Sit id voluptatem culpa tempora. Odit earum impedit quisquam? Dolor.lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, unde? Temporibus exercitationem perspiciatis quas eum nisi. Fugiat dicta inventore iste nisi. Recusandae explicabo eum blanditiis at doloremque reprehenderit minima provident. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ratione, quibusdam totam error dolore alias ipsa expedita hic? Vel quasi voluptate doloremque molestiae dolore provident magni voluptas libero quae labore.</p>
+                <img src="poe.jpg" alt="Album poe">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia error ea, distinctio doloremque autem alias fugit facere ipsum ad dicta. Sit id voluptatem culpa tempora. Odit earum impedit quisquam? Dolor.lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, unde? Temporibus exercitationem perspiciatis quas eum nisi. Fugiat dicta inventore iste nisi. Recusandae explicabo eum blanditiis at doloremque reprehenderit minima provident. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ratione, quibusdam totam error dolore alias ipsa expedita hic? Vel quasi voluptate doloremque molestiae dolore provident magni voluptas libero quae labore.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia error ea, distinctio doloremque autem alias fugit facere ipsum ad dicta. Sit id voluptatem culpa tempora. Odit earum impedit quisquam? Dolor.lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, unde? Temporibus exercitationem perspiciatis quas eum nisi. Fugiat dicta inventore iste nisi. Recusandae explicabo eum blanditiis at doloremque reprehenderit minima provident. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ratione, quibusdam totam error dolore alias ipsa expedita hic? Vel quasi voluptate doloremque molestiae dolore provident magni voluptas libero quae labore.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia error ea, distinctio doloremque autem alias fugit facere ipsum ad dicta. Sit id voluptatem culpa tempora. Odit earum impedit quisquam? Dolor.lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, unde? Temporibus exercitationem perspiciatis quas eum nisi. Fugiat dicta inventore iste nisi. Recusandae explicabo eum blanditiis at doloremque reprehenderit minima provident. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ratione, quibusdam totam error dolore alias ipsa expedita hic? Vel quasi voluptate doloremque molestiae dolore provident magni voluptas libero quae labore.</p>
+            </div>
+            <h2>float: left;</h2>
+            <p class="pinline">Le agregamos a la imagen el float: left; por lo tanto la imagen se corre hacia la izquierda y ahi es donde todo el texto restante se ordena al rededor de la imagen</p>
+            <div class="f2">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia error ea, distinctio doloremque autem alias fugit facere ipsum ad dicta. Sit id voluptatem culpa tempora. Odit earum impedit quisquam? Dolor.lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, unde? Temporibus exercitationem perspiciatis quas eum nisi. Fugiat dicta inventore iste nisi. Recusandae explicabo eum blanditiis at doloremque reprehenderit minima provident. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ratione, quibusdam totam error dolore alias ipsa expedita hic? Vel quasi voluptate doloremque molestiae dolore provident magni voluptas libero quae labore.</p>
+                <img src="poe.jpg" alt="Album poe">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia error ea, distinctio doloremque autem alias fugit facere ipsum ad dicta. Sit id voluptatem culpa tempora. Odit earum impedit quisquam? Dolor.lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, unde? Temporibus exercitationem perspiciatis quas eum nisi. Fugiat dicta inventore iste nisi. Recusandae explicabo eum blanditiis at doloremque reprehenderit minima provident. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ratione, quibusdam totam error dolore alias ipsa expedita hic? Vel quasi voluptate doloremque molestiae dolore provident magni voluptas libero quae labore.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia error ea, distinctio doloremque autem alias fugit facere ipsum ad dicta. Sit id voluptatem culpa tempora. Odit earum impedit quisquam? Dolor.lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, unde? Temporibus exercitationem perspiciatis quas eum nisi. Fugiat dicta inventore iste nisi. Recusandae explicabo eum blanditiis at doloremque reprehenderit minima provident. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ratione, quibusdam totam error dolore alias ipsa expedita hic? Vel quasi voluptate doloremque molestiae dolore provident magni voluptas libero quae labore.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia error ea, distinctio doloremque autem alias fugit facere ipsum ad dicta. Sit id voluptatem culpa tempora. Odit earum impedit quisquam? Dolor.lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, unde? Temporibus exercitationem perspiciatis quas eum nisi. Fugiat dicta inventore iste nisi. Recusandae explicabo eum blanditiis at doloremque reprehenderit minima provident. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ratione, quibusdam totam error dolore alias ipsa expedita hic? Vel quasi voluptate doloremque molestiae dolore provident magni voluptas libero quae labore.</p>
+            </div>
+            <h2>float: none;</h2>
+            <p class="pinline">Le agregamos a la imagen el float: none; por lo tanto la imagen se comporta en forma de bloque, entonces todos los elementos de al lado se corren hacia abajo</p>
+            <div class="f3">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia error ea, distinctio doloremque autem alias fugit facere ipsum ad dicta. Sit id voluptatem culpa tempora. Odit earum impedit quisquam? Dolor.lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, unde? Temporibus exercitationem perspiciatis quas eum nisi. Fugiat dicta inventore iste nisi. Recusandae explicabo eum blanditiis at doloremque reprehenderit minima provident. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ratione, quibusdam totam error dolore alias ipsa expedita hic? Vel quasi voluptate doloremque molestiae dolore provident magni voluptas libero quae labore.</p>
+                <img src="poe.jpg" alt="Album poe">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia error ea, distinctio doloremque autem alias fugit facere ipsum ad dicta. Sit id voluptatem culpa tempora. Odit earum impedit quisquam? Dolor.lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, unde? Temporibus exercitationem perspiciatis quas eum nisi. Fugiat dicta inventore iste nisi. Recusandae explicabo eum blanditiis at doloremque reprehenderit minima provident. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ratione, quibusdam totam error dolore alias ipsa expedita hic? Vel quasi voluptate doloremque molestiae dolore provident magni voluptas libero quae labore.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia error ea, distinctio doloremque autem alias fugit facere ipsum ad dicta. Sit id voluptatem culpa tempora. Odit earum impedit quisquam? Dolor.lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, unde? Temporibus exercitationem perspiciatis quas eum nisi. Fugiat dicta inventore iste nisi. Recusandae explicabo eum blanditiis at doloremque reprehenderit minima provident. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ratione, quibusdam totam error dolore alias ipsa expedita hic? Vel quasi voluptate doloremque molestiae dolore provident magni voluptas libero quae labore.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia error ea, distinctio doloremque autem alias fugit facere ipsum ad dicta. Sit id voluptatem culpa tempora. Odit earum impedit quisquam? Dolor.lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, unde? Temporibus exercitationem perspiciatis quas eum nisi. Fugiat dicta inventore iste nisi. Recusandae explicabo eum blanditiis at doloremque reprehenderit minima provident. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ratione, quibusdam totam error dolore alias ipsa expedita hic? Vel quasi voluptate doloremque molestiae dolore provident magni voluptas libero quae labore.</p>
+            </div>
+        </div>
+    </section>
+
+    <h1>Position: relative, absolute, static, fixed;</h1>
+    <section class="contenedor-position">
+        <ul>
+            <li>El cuadro rojo tiene una posicion en forma relativa por lo tanto se habilitan dos propiedades la propiedad left y top, estas nos ayudan a moverla de forma top arriba y left a la izquierda</li>
+            <li>El cuadro de color rosa tiene una posicion de forma absoluta por lo tanto se habilitan las cuatro propiedad left, right, top, bottom, en este caso posiciono mi figura de color rosa en la parte inferior a la derecha, necesariamente el padre(.contenedorabsolute) de mi cuadro rosa debe tener una posicion relativa para que se acomode en la franja azul</li>
+            <li>El cuadro de color chocolate tiene la forma estatica por lo tanto ninguno de las cuatro propiedades me serviran para moverla, por ende que un elemento tenga una posicion estatica lo deja en su mismo lugar sin poderlo manipular con las cuatro propiedades left, right, top, bottom.</li>
+            <li>El cuadro de color amarillo que se encuentra en la parte inferior derecha, este que nos sigue a todos lados es quien tiene la posicion fija osea se nos marca en la direccion que nosotros le digamos, dejando solo la propiedad position:fixed; se nos desaparece debemos obligatoriamente especificarle donde lo queremos tener.</li>
+        </ul>
+        <div class="pcontenedor">
+            <div class="boxrelative">relative</div>
+            <div class="contenedorabsolute">
+                <div class="boxabsolute">absolute</div>
+            </div>
+        </div>
+        <div class="boxstatic">static</div>
+        <div class="boxfixed">fixed</div>
+    </section>
+
+    <section class="ejerciciotodo">
+        <div class="divgrande">
+            <div class="divbanner">
+                header
+            </div>
+            <div class="divcontent dc1">
+                😢
+            </div>
+            <p class="textcontent">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam necessitatibus eos illo laboriosam nobis soluta, corporis laborum amet incidunt quasi commodi molestiae ullam id sequi earum, deserunt qui! Reprehenderit, animi!
+            </p>
+            <div class="divcontent dc2">
+                😢
+            </div>
+            <div class="divcontent dc3">
+                😢
+            </div>
+            <img src="callabo.jpg" alt="Callabo" class="imagecontent">
+            <div class="divcontent dc5">
+                😢
+            </div>
+        </div>
+        <div class="divpequenio">
+            <div class="divptop">
+
+            </div>
+            <div class="divpbottom">
+
+            </div>
+        </div>
+        <div class="divsticky"></div>
+    </section>
+</body>
+</html>

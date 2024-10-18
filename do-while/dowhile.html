@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do-While</title>
+    <link rel="stylesheet" href="dowhile.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1>Intenta adivinar un número entre 1 y 100</h1>
+        <div class="contenedor">
+            <div class="contenedorFormulario">
+                <input type="text" id="txtNumIngresar" class="txtIngresarNumber" placeholder="Agregar un número válido">
+                <button onclick="compruebaDatos()" id="btnNumIngresar" class="btnAdivinar">Adivinar</button>
+            </div>
+            <p id="message"></p>
+            <p id="intentosRider" class="intentosRider">😊😊😊😊😊😊</p>
+        </div>
+        <ul id="listaDeIntentos" class="listaDeIntentos"></ul>
+    </div>
+
+
+    <script src="dowhile.js"></script>
+</body>
+
+</html>
